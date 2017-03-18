@@ -1,5 +1,7 @@
-Samples Workspace
-=================
+Customization for Samples Workspace
+===================================
+
+**This repository has to be renamed as _boulanger**
 
 Workspace consists of the following repositories:
 - root that performs version management
