@@ -2,7 +2,7 @@ echo.
 echo =====================================================================================================================
 
 E:
-SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\
+SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\docker\
 
 rem standard (default) locations
 SET WORKING_DIRECTORY_GIT=%WORKSPACE_DIRECTORY%git

@@ -1,11 +1,11 @@
 
 echo.
 echo =====================================================================================================================
-echo             Installation of XXXXXXXXXXXXXXXXXXXXXXXX
+echo             Installation of docker-java
 echo =====================================================================================================================
-SET WORKING_DIRECTORY=%WORKING_DIRECTORY_GIT%\XXXXXXXXXXXXXXXXXXXXXXXX
+SET WORKING_DIRECTORY=%WORKING_DIRECTORY_GIT%\docker-java
 CD %WORKING_DIRECTORY%
-SET MVN_ARGS= ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+SET MVN_ARGS= -Dmaven.repo.local=%MAVEN_REPOSITORY% clean install -s %MAVEN_SETTINGS% -DskipTests=true
 echo.
 rem dir /B
 echo.

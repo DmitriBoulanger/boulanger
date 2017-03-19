@@ -20,7 +20,7 @@ pause
 SET CURRENT_DIRECTORY=%~dp0
 CALL %CURRENT_DIRECTORY%location.cmd
 SET MAVEN_REPOSITORY=%WORKSPACE_DIRECTORY%..\_m2\repository
-SET MAVEN_SETTINGS=%WORKING_DIRECTORY_GIT%\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\settings.xml
+SET MAVEN_SETTINGS=%WORKSPACE_DIRECTORY%m2\settings.xml
 rem =====================================================================================================================
 
 CALL %CURRENT_DIRECTORY%cleaner.cmd
