@@ -14,7 +14,8 @@ call mvn -version
 pause
 
 rem ==================================================================
-SET WORKSPACE_DIRECTORY=%~dp0%..\..\..\..\XXXXXXXXXXXXXXXXXXXXXX\
+E:
+SET WORKSPACE_DIRECTORY=%~dp0%..\..\..\..\samples-spring-boot\
 rem ==================================================================
 
 SET MAVEN_REPOSITORY=%WORKSPACE_DIRECTORY%m2\repository
@@ -23,9 +24,9 @@ SET GIT_DIRECTORY=%WORKSPACE_DIRECTORY%git
 
 echo.
 echo ===================================================================
-echo             Installation of XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+echo             Installation of samples-spring-boot
 echo ===================================================================
-pushd %GIT_DIRECTORY%\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+cd %GIT_DIRECTORY%\samples-spring-boot
 rem dir /B
 echo.
 echo Working Directory %~dp0 ...

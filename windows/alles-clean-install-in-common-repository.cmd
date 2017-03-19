@@ -16,7 +16,8 @@ call mvn -version
 pause
 
 rem ==================================================================
-SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\XXXXXX\
+E:
+SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\samples-spring-boot\
 rem ==================================================================
 
 SET MAVEN_REPOSITORY=%WORKSPACE_DIRECTORY%..\_m2\repository
@@ -27,7 +28,7 @@ echo.
 echo ===================================================================
 echo          Clean-up of the common local artifacts
 echo ===================================================================
-pushd %MAVEN_REPOSITORY%
+cd %MAVEN_REPOSITORY%
 dir /B
 echo Removing all maven-artifacts ...
 pause
@@ -40,17 +41,13 @@ rem dir /B
 
 echo.
 echo ===================================================================
-echo             Installation of XXXXXX
+echo             Installation of samples-spring-boot
 echo ===================================================================
-pushd %GIT_DIRECTORY%\XXXXXX
+cd %GIT_DIRECTORY%\samples-spring-boot
 rem dir /B
 echo.
 echo Working Directory %~dp0 ...
 echo Runnig Maven clean install with skipTests ...
-pause
-call mvn clean install -s %MAVEN_SETTINGS% -DskipTests=true
-
-
 pause
 call mvn clean install -s %MAVEN_SETTINGS% -DskipTests=true
 
