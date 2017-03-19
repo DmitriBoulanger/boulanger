@@ -1,16 +1,20 @@
 
 echo.
 echo =====================================================================================================================
-echo             Installation of XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+echo             Installation of XXXXXXXXXXXXXXXXXXXXXXXX
 echo =====================================================================================================================
-SET WORKING_DIRECTORY=%WORKING_DIRECTORY_GIT%\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+SET WORKING_DIRECTORY=%WORKING_DIRECTORY_GIT%\XXXXXXXXXXXXXXXXXXXXXXXX
 CD %WORKING_DIRECTORY%
+SET MVN_ARGS= ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+echo.
 rem dir /B
 echo.
-echo WORKING_DIRECTORY=%WORKING_DIRECTORY% ...
-echo Runnig Maven for XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-repository YYYYYYYYYYYYYYYYYYYYYYYY ...
+echo Running Maven:
+echo WORKING_DIRECTORY=%WORKING_DIRECTORY%
+echo MVN_ARGS=%MVN_ARGS%
+echo.
 echo.
 pause
-CALL mvn -Dmaven.repo.local=%MAVEN_REPOSITORY% clean install -s %MAVEN_SETTINGS% -DskipTests=true ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+call mvn %MVN_ARGS%
 echo.
 pause
