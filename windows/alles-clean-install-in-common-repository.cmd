@@ -16,6 +16,7 @@ call mvn -version
 pause
 
 rem ==================================================================
+E:
 SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\samples\
 rem ==================================================================
 
@@ -27,7 +28,7 @@ echo.
 echo ===================================================================
 echo          Clean-up of the common local artifacts
 echo ===================================================================
-pushd %MAVEN_REPOSITORY%
+cd %MAVEN_REPOSITORY%
 dir /B
 echo Removing all maven-artifacts ...
 pause
@@ -42,8 +43,8 @@ echo.
 echo ===================================================================
 echo             Installation of root
 echo ===================================================================
-pushd %GIT_DIRECTORY%\root
-rem dir /B
+cd %GIT_DIRECTORY%\root
+dir /B
 echo.
 echo Working Directory %~dp0 ...
 echo Runnig Maven clean install with skipTests ...
@@ -54,8 +55,8 @@ echo.
 echo ===================================================================
 echo             Installation of tools
 echo ===================================================================
-pushd %GIT_DIRECTORY%\tools
-rem dir /B
+cd %GIT_DIRECTORY%\tools
+dir /B
 echo.
 echo Working Directory %~dp0 ...
 echo Runnig Maven clean install with skipTests ...
@@ -66,8 +67,8 @@ echo.
 echo ===================================================================
 echo             Installation of mvn-plugins
 echo ===================================================================
-pushd %GIT_DIRECTORY%\mvn-plugins
-rem dir /B
+cd %GIT_DIRECTORY%\mvn-plugins
+dir /B
 echo.
 echo Working Directory %~dp0 ...
 echo Runnig Maven clean install with skipTests ..
@@ -76,23 +77,11 @@ call mvn clean install -s %MAVEN_SETTINGS% -DskipTests=true
 
 echo.
 echo ===================================================================
-echo             Installation of samples-spring-boot
-echo ===================================================================
-pushd %GIT_DIRECTORY%\samples-spring-boot
-rem dir /B
-echo.
-echo Working Directory %~dp0 ...
-echo Runnig Maven clean install skipTests ..
-pause
-call mvn clean install -s %MAVEN_SETTINGS% -DskipTests=true
-
-echo.
-echo ===================================================================
 echo             Installation of samples
 echo ===================================================================
 SET WORKING_DIRECTORY=%GIT_DIRECTORY%\samples
-pushd %WORKING_DIRECTORY%
-rem dir /B
+cd %WORKING_DIRECTORY%
+dir /B
 echo.
 echo Working Directory %~dp0 ...
 echo Runnig Maven clean install skipTests ..
@@ -103,8 +92,8 @@ echo.
 echo ===================================================================
 echo            Installation of tests
 echo ===================================================================
-pushd %GIT_DIRECTORY%\tests
-rem dir /B
+cd %GIT_DIRECTORY%\tests
+dir /B
 echo.
 echo Working Directory %~dp0 ...
 echo Runnig Maven clean install skipTests ..
