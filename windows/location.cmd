@@ -2,7 +2,7 @@ echo.
 echo =====================================================================================================================
 
 E:
-SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\jbehave\
+SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\
 
 rem standard (default) locations
 SET WORKING_DIRECTORY_GIT=%WORKSPACE_DIRECTORY%git
