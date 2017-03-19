@@ -1,8 +1,13 @@
-Customization for XXXXX Workspace
-=================
+Customization for Docker Workspace
+===================================
 
 Workspace consists of the following repositories:
-- XXXX
+
+- docker-java
+
+**Comments**:
+
+- check-style errors 
 
 
 The complete build-up without tests can be done with
