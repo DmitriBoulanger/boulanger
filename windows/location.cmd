@@ -1,15 +1,13 @@
 echo.
 echo =====================================================================================================================
 
-E:
-SET WORKSPACE_DIRECTORY=%~dp0..\..\..\..\docker\
-
-rem standard (default) locations
+%WORKSPACES_DRIVE%
+SET WORKSPACE_DIRECTORY=%WORKSPACES_DIRECTORY%\docker\
 SET WORKING_DIRECTORY_GIT=%WORKSPACE_DIRECTORY%git
 
-
-echo WORKSPACE_DIRECTORY=%WORKSPACE_DIRECTORY%
-echo WORKING_DIRECTORY_GIT=%WORKING_DIRECTORY_GIT%
+echo WORKSPACES_DIRECTORY  =  %WORKSPACES_DIRECTORY%
+echo WORKSPACE_DIRECTORY   =  %WORKSPACE_DIRECTORY%
+echo WORKING_DIRECTORY_GIT =  %WORKING_DIRECTORY_GIT%
 
 echo =====================================================================================================================
 echo.
